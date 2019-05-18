@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-cliente en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-CLIENTE'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-cliente -c /home/ajpina/repositorio/trunk/argos-scada/config/cliente_datos.xml'

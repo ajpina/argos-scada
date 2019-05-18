@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-escaner en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-ESCANER'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-escaner -d /home/ajpina/repositorio/trunk/argos-scada/config/dispositivos.xml -t /home/ajpina/repositorio/trunk/argos-scada/config/tags.xml -a /home/ajpina/repositorio/trunk/argos-scada/config/alarmas.xml'

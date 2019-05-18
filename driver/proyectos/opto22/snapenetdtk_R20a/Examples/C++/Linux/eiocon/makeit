@@ -1,0 +1,1 @@
+g++ eiocon.cpp ../../../../Source/C++/O22SIOMM.cpp ../../../../Source/C++/O22SIOUT.cpp ../../../../Source/C++/O22SIOST.cpp -D_LINUX -lpthread -o eiocon

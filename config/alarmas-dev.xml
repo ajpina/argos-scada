@@ -1,0 +1,31 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<alarmas_xml>
+	<cantidad>2</cantidad>
+	<nombre>alarmas</nombre>
+	<alarma id="1" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>sobrecorriente_motor_lado_uno</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="1"/>
+		<origen tipo="registro">
+			<ubicacion id="1" modelo="SIM" nombre="sim_mbtcp"/>
+			<dato direccion="100001" tipo="BIT_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="2" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="3" descripcion="puente"/>
+		<nombre>colision_adelante</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="1"/>
+		<origen tipo="tag">
+			<ubicacion id="" modelo="" nombre="escaner/tags"/>
+			<dato direccion="ganch_dist_freno" tipo="CORTO_" bit="3"/>
+		</origen>
+	</alarma>
+</alarmas_xml>

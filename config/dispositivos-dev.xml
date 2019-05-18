@@ -1,0 +1,25 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<dispositivos_xml>
+	<cantidad>1</cantidad>
+	<nombre>cliente1</nombre>
+	<dispositivo id="1" modelo="SIM">
+		<nombre>sim_mbtcp</nombre>
+		<marca/>
+		<tipo/>
+		<habilitado>1</habilitado>
+		<comunicacion>
+			<tipo>MBTCP</tipo>
+			<direccion>127.0.0.1</direccion>
+			<puerto>1503</puerto>
+			<nodo>66</nodo>
+		</comunicacion>
+		<grupos/>
+		<tiempo_muestreo>300</tiempo_muestreo>
+		<lectura>
+			<registro direccion="000001" tipo="BIT_" cantidad="40" tmb="OCOILS_" escritura="1"/>
+			<registro direccion="100001" tipo="BIT_" cantidad="40" tmb="ICOILS_" escritura="0"/>
+			<registro direccion="300001" tipo="CORTO_" cantidad="40" tmb="IREG_" escritura="0"/>
+			<registro direccion="400001" tipo="CORTO_" cantidad="40" tmb="HREG_" escritura="1"/>
+		</lectura>
+	</dispositivo>
+</dispositivos_xml>

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-registrador en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-REGISTRADOR'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-registrador -h /home/ajpina/repositorio/trunk/argos-scada/config/historicos.xml -t /home/ajpina/repositorio/trunk/argos-scada/config/tags.xml -a /home/ajpina/repositorio/trunk/argos-scada/config/alarmas.xml'

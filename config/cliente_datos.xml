@@ -1,0 +1,1546 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<cliente_datos_xml>
+	<directorio>cliente1</directorio>
+	<destino_tags habilitado="1">tags</destino_tags>
+	<tags_x_mensaje>45</tags_x_mensaje>
+	<destino_alarmas habilitado="1">alarmas</destino_alarmas>
+	<alarmas_x_mensaje>45</alarmas_x_mensaje>
+	<multicast>
+		<puerto>16001</puerto>
+		<grupo>224.29.8.7</grupo>
+		<loop>1</loop>
+		<ttl>1</ttl>
+	</multicast>
+	<tags_cliente>
+		<cantidad>99</cantidad>
+		<tag id="1">
+			<nombre>trasl_puente_I_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>29.9</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="2">
+			<nombre>trasl_puente_I_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>30.1</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="3">
+			<nombre>trasl_puente_V_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>31.1</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="4">
+			<nombre>trasl_puente_V_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>32.2</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="5">
+			<nombre>trasl_puente_Vel_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>33.3</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="6">
+			<nombre>trasl_puente_Vel_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>34.4</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="7">
+			<nombre>trasl_puente_Arr_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>35</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="8">
+			<nombre>trasl_puente_Arr_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>36</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="9">
+			<nombre>trasl_puente_Freno_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>37</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="10">
+			<nombre>trasl_puente_Freno_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>38</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="11">
+			<nombre>trasl_puente_Tiempo_Uso_motor_lado_uno</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>39</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="12">
+			<nombre>trasl_puente_Tiempo_Uso_motor_lado_dos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>40</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="13">
+			<nombre>trasl_puente_Colision_Adelante</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="14">
+			<nombre>trasl_puente_Colision_Atras</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="15">
+			<nombre>trasl_puente_Fin_Nave_Adelante</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="16">
+			<nombre>trasl_puente_Fin_Nave_Atras</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="17">
+			<nombre>compres_Presion_Entrada_Baja</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="18">
+			<nombre>compres_Presion_Entrada_Alta</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="19">
+			<nombre>compres_Temperatura_Mezcla</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>41.12</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="20">
+			<nombre>compres_Presion_Mezcla</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>42.23</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="21">
+			<nombre>compres_Presion_Salida_Baja</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="22">
+			<nombre>compres_Presion_Salida_Alta</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="23">
+			<nombre>compres_Arranques_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>43</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="24">
+			<nombre>compres_Tiempo_Uso_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>44</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="25">
+			<nombre>compres_Arranques_Ventilador</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>45</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="26">
+			<nombre>trasl_ms_I_motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>46.67</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="27">
+			<nombre>trasl_ms_V_motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>47</valor_x_defecto>
+			<tipo>CARAC_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="28">
+			<nombre>trasl_ms_Vel_motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>48.89</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="29">
+			<nombre>trasl_ms_Arranques_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>49</valor_x_defecto>
+			<tipo>CORTO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="30">
+			<nombre>trasl_ms_Freno_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>CARAC_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="31">
+			<nombre>trasl_ms_Tiempo_Uso_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>50</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="32">
+			<nombre>trasl_ms_Fin_Carrera_Izq</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>CARAC_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="33">
+			<nombre>trasl_ms_Fin_Carrera_Der</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>CORTO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="34">
+			<nombre>arm_ms_Carro_Pos_Llenado</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="35">
+			<nombre>arm_ms_Grua_Pos_Llenado</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="36">
+			<nombre>arm_ms_Fuelle_Arriba</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="37">
+			<nombre>arm_ms_Tolva_Llena</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="38">
+			<nombre>arm_ms_Tolva_Llenando</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="39">
+			<nombre>arm_ms_Contador_Subida_Fuelle</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>51</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="40">
+			<nombre>arm_ms_Contador_Tubo_Banqueo_Arriba</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>52</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="41">
+			<nombre>arm_ms_Contador_Tubo_Banqueo_Abajo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>53</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="42">
+			<nombre>arm_ms_Contador_Inclinar_T_Banqueo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>54</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="43">
+			<nombre>arm_ms_Contador_Valv_Banqueo_abierta</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>55</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="44">
+			<nombre>rot_ms_Arranques_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>56</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="45">
+			<nombre>rot_ms_Tiempo_Uso_Motor</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>57</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="46">
+			<nombre>anod_ms_Contador_Subidas_Anodos</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>58</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="47">
+			<nombre>anod_ms_Movimiento_Pinzas</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="48">
+			<nombre>anod_ms_Contador_Movimiento_Grapa</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>59</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="49">
+			<nombre>anod_ms_Contador_Apriete_Grapas</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>60</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="50">
+			<nombre>anod_ms_Altura_Anodo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>61.45</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="51">
+			<nombre>anod_ms_Contador_Mov_Brazo_Med</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>62</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="52">
+			<nombre>romp_ms_Contador_Mov_Brazo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>63</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="53">
+			<nombre>romp_ms_Contador_Golpes</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>64</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="54">
+			<nombre>romp_ms_Tiempo_Uso_Martillo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>65</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="55">
+			<nombre>desn_ms_Contador_Mov_Pala</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>66</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="56">
+			<nombre>desn_ms_Contador_Pala_Abierta</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>67</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="57">
+			<nombre>desn_ms_Tiempo_Uso</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>68</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="58">
+			<nombre>aac_ms_Temperatura_Armario</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>69</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="59">
+			<nombre>ganch_col_I_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>70</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="60">
+			<nombre>ganch_col_V_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>71</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="61">
+			<nombre>ganch_col_Vel_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>72</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="62">
+			<nombre>ganch_col_Arranques_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>73</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="63">
+			<nombre>ganch_col_Tiempo_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>74</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="64">
+			<nombre>ganch_col_Fin_Lado_izq</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="65">
+			<nombre>ganch_col_Fin_Lado_der</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="66">
+			<nombre>ganch_col_Freno_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="67">
+			<nombre>ganch_col_I_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>74</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="68">
+			<nombre>ganch_col_V_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>75</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="69">
+			<nombre>ganch_col_Vel_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>76</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="70">
+			<nombre>ganch_col_Arr_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>77</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="71">
+			<nombre>ganch_col_Tiempo_Uso_Motor_Elev</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>78</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="72">
+			<nombre>ganch_col_Fin_Maximo_Abajo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="73">
+			<nombre>ganch_col_Fin_Maximo_Arriba</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="74">
+			<nombre>ganch_col_Fin_Carrera_Emerg</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="75">
+			<nombre>ganch_col_Guaya_Floja</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="76">
+			<nombre>ganch_col_Freno_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="77">
+			<nombre>ganch_col_Freno_Zapatas_Elev</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="78">
+			<nombre>ganch_col_Carga_Gancho</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>79</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="79">
+			<nombre>ganch_col_Arr_Motor_Rot_Gancho</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>80</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="80">
+			<nombre>ganch_col_Tiempo_Motor_Rot</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>81</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="81">
+			<nombre>ganch_aux_I_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>82</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="82">
+			<nombre>ganch_aux_V_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>83</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="83">
+			<nombre>ganch_aux_Vel_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>84</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="84">
+			<nombre>ganch_aux_Arr_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>85</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="85">
+			<nombre>ganch_aux_Tiempo_Uso_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>86</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="86">
+			<nombre>ganch_aux_Fin_Lado_izq</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="87">
+			<nombre>ganch_aux_Fin_Lado_der</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="88">
+			<nombre>ganch_aux_Freno_Motor_Dir</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="89">
+			<nombre>ganch_aux_I_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>87</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="90">
+			<nombre>ganch_aux_V_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>88</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="91">
+			<nombre>ganch_aux_Vel_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>89</valor_x_defecto>
+			<tipo>REAL_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="92">
+			<nombre>ganch_aux_Arr_Motor_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>90</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="93">
+			<nombre>ganch_aux_Tiempo_Uso_Motor_Elev</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>91</valor_x_defecto>
+			<tipo>ENTERO_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="94">
+			<nombre>ganch_aux_Fin_Maximo_Abajo</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="95">
+			<nombre>ganch_aux_Fin_Maximo_Arriba</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="96">
+			<nombre>ganch_aux_Fin_Carrera_Emerg</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="97">
+			<nombre>ganch_aux_Guaya_Floja</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="98">
+			<nombre>ganch_aux_Freno_Elevacion</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+		<tag id="99">
+			<nombre>ganch_aux_Freno_Zapatas_Elev</nombre>
+			<grupo>trasl_puente</grupo>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+			<valor_x_defecto>1</valor_x_defecto>
+			<tipo>BIT_</tipo>
+			<habilitado lectura="1" escritura="1"/>
+			<interpolacion habilitado="1">
+				<minimo>0</minimo>
+				<ue_minimo>100</ue_minimo>
+				<maximo>500</maximo>
+				<ue_maximo>1000</ue_maximo>
+			</interpolacion>
+		</tag>
+	</tags_cliente>
+	<alarmas_cliente>
+		<cantidad>14</cantidad>
+		<alarma id="1" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>sobrecorriente_motor_lado_uno</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion/>
+			<tipo_comparacion/>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="2" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="2" descripcion="motor_lado_dos"/>
+			<nombre>sobrecorriente_motor_lado_dos</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>6000</valor_comparacion>
+			<tipo_comparacion>MENOR_IGUAL_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="3" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>sobrevoltaje_motor_lado_uno</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="4" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="2" descripcion="motor_lado_dos"/>
+			<nombre>sobrevoltaje_motor_lado_dos</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="5" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="3" descripcion="puente"/>
+			<nombre>colision_adelante</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion/>
+			<tipo_comparacion/>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="6" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="3" descripcion="puente"/>
+			<nombre>colision_atras</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MENOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="7" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>fin_de_nave_adelante</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>-12000</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="8" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>fin_de_nave_atras</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion/>
+			<tipo_comparacion/>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="9" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>presion_entrada_baja</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_IGUAL_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="10" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>presion_entrada_alta</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion/>
+			<tipo_comparacion/>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="11" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>alta_temperatura</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="12" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>alta_presion</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="13" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>sobrecorriente_motor</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+		<alarma id="14" prioridad="10">
+			<grupo id="1" descripcion="traslacion_puente"/>
+			<subgrupo id="1" descripcion="motor_lado_uno"/>
+			<nombre>sobrevoltaje_motor</nombre>
+			<estado_x_defecto>DESACT_</estado_x_defecto>
+			<valor_comparacion>850</valor_comparacion>
+			<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+			<tipo_origen>ENTERO_</tipo_origen>
+			<descripcion>Traslacion Puente Corriente Motor Lado Uno</descripcion>
+		</alarma>
+	</alarmas_cliente>
+</cliente_datos_xml>

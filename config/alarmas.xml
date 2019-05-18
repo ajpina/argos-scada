@@ -1,0 +1,187 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<alarmas_xml>
+	<cantidad>14</cantidad>
+	<nombre>alarmas</nombre>
+	<alarma id="1" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>sobrecorriente_motor_lado_uno</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="1"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps_1_uno"/>
+			<dato direccion="Program:MainProgram.Disparo" tipo="BIT_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="2" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="2" descripcion="motor_lado_dos"/>
+		<nombre>sobrecorriente_motor_lado_dos</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>6000</valor_comparacion>
+		<tipo_comparacion>MENOR_IGUAL_QUE_</tipo_comparacion>
+		<historicos habilitado="1"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps_1_uno"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.ACC" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="3" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>sobrevoltaje_motor_lado_uno</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="1"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps_1_uno"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.ACC" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="4" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="2" descripcion="motor_lado_dos"/>
+		<nombre>sobrevoltaje_motor_lado_dos</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="1"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="5" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="3" descripcion="puente"/>
+		<nombre>colision_adelante</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="1"/>
+		<origen tipo="tag">
+			<ubicacion id="" modelo="" nombre="escaner/tags"/>
+			<dato direccion="ganch_dist_freno" tipo="CORTO_" bit="3"/>
+		</origen>
+	</alarma>
+	<alarma id="6" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="3" descripcion="puente"/>
+		<nombre>colision_atras</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MENOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="tag">
+			<ubicacion id="" modelo="" nombre="escaner/tags"/>
+			<dato direccion="trasl_puente_Arr_motor_lado_dos" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="7" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>fin_de_nave_adelante</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>-12000</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps_1_uno"/>
+			<dato direccion="Program:OtroPrograma.Real1" tipo="REAL_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="8" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>fin_de_nave_atras</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="1" modelo="AB" nombre="allen_bradley_clx_ethip"/>
+			<dato direccion="Program:OtroPrograma.TemporizadorON1.ACC" tipo="ENTERO_" bit="4"/>
+		</origen>
+	</alarma>
+	<alarma id="9" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>presion_entrada_baja</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_IGUAL_QUE_</tipo_comparacion>
+		<historicos habilitado="1"/>
+		<origen tipo="tag">
+			<ubicacion id="" modelo="" nombre="escaner/tags"/>
+			<dato direccion="desn_ms_Tiempo_Uso" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="10" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>presion_entrada_alta</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion/>
+		<tipo_comparacion/>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.Disparo" tipo="BIT_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="11" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>alta_temperatura</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="12" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>alta_presion</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="13" escritura="0">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>sobrecorriente_motor</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+	<alarma id="14" escritura="1">
+		<grupo id="1" descripcion="traslacion_puente"/>
+		<subgrupo id="1" descripcion="motor_lado_uno"/>
+		<nombre>sobrevoltaje_motor</nombre>
+		<estado_x_defecto>DESACT_</estado_x_defecto>
+		<valor_comparacion>850</valor_comparacion>
+		<tipo_comparacion>MAYOR_QUE_</tipo_comparacion>
+		<historicos habilitado="0"/>
+		<origen tipo="registro">
+			<ubicacion id="3" modelo="AB" nombre="allen_bradley_clx_ethip_ps"/>
+			<dato direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" bit=""/>
+		</origen>
+	</alarma>
+</alarmas_xml>

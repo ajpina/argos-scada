@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-mbtcp en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-MBTCP'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-mbtcp -d /home/ajpina/repositorio/trunk/argos-scada/config/dispositivos.xml'

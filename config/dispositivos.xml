@@ -1,0 +1,221 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<dispositivos_xml>
+	<cantidad>3</cantidad>
+	<nombre>cliente1</nombre>
+	<dispositivo id="1" modelo="AB">
+		<nombre>allen_bradley_clx_ethip</nombre>
+		<marca>AB</marca>
+		<tipo>LGX</tipo>
+		<habilitado>1</habilitado>
+		<comunicacion>
+			<tipo>CNET</tipo>
+			<direccion>192.168.117.61</direccion>
+			<ruta>1,1</ruta>
+			<nodo/>
+		</comunicacion>
+		<grupos/>
+		<tiempo_muestreo>100</tiempo_muestreo>
+		<lectura>
+			<registro direccion="Entrada_Flotante" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Salida_Flotante" tipo="REAL_" escritura="0"/>
+			<registro direccion="Program:MainProgram.Entrada_Seno" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Salida_Seno" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Entrada_Binaria" tipo="BIT_" escritura="1"/>
+			<registro direccion="Salida_Binaria" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Pulso" tipo="BIT_" escritura="0"/>
+			<registro direccion="Program:MainProgram.Lacht_Binario" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.TemporizadorON1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.TemporizadorOFF1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.TemporizadorOFF1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Disparo" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Disparo2" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:MainProgram.ContadorUP1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.ContadorUP1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.ContadorDown1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.ContadorDown1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Real1" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Real2" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Entero1" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:MainProgram.Entero2" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Salida_Flotante" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Entrada_Seno" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Salida_Seno" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Pulso" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Lacht_Binario" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.TemporizadorON1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.TemporizadorON1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.TemporizadorOFF1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.TemporizadorOFF1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Disparo" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Disparo2" tipo="BIT_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.ContadorUP1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.ContadorUP1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.ContadorDown1.PRE" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.ContadorDown1.ACC" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Real1" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Real2" tipo="REAL_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Entero1" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="Program:OtroPrograma.Entero2" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="ARREGLO_DINT" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="menos_uno" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="dentero" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="sentero" tipo="CARAC_" escritura="1"/>
+			<registro direccion="intero" tipo="CORTO_" escritura="1"/>
+			<registro direccion="rreal" tipo="REAL_" escritura="1"/>
+			<registro direccion="menos_uno_sint" tipo="CARAC_" escritura="1"/>
+			<registro direccion="ndentero" tipo="ENTERO_" escritura="1"/>
+			<registro direccion="nsentero" tipo="CARAC_" escritura="1"/>
+			<registro direccion="nintero" tipo="CORTO_" escritura="1"/>
+			<registro direccion="nrreal" tipo="REAL_" escritura="1"/>
+		</lectura>
+	</dispositivo>
+	<dispositivo id="2" modelo="AB">
+		<nombre>allen_bradley_clx_ethip_ps</nombre>
+		<marca>AB</marca>
+		<tipo>LGX</tipo>
+		<habilitado>1</habilitado>
+		<comunicacion>
+			<tipo>PaS</tipo>
+			<direccion/>
+			<ruta/>
+			<nodo/>
+		</comunicacion>
+		<grupos>
+			<oyente id="1" puerto="9003" longitud="200">
+				<cantidad>1</cantidad>
+				<equipo nombre="uno" ip="192.168.117.60" puerto_escritura="17000">
+					<registro direccion="Entrada_Flotante" tipo="REAL_" indice="54" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.Salida_Flotante" tipo="REAL_" indice="49" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.Entrada_Seno" tipo="ENTERO_" indice="22" longitud="4" escritura="0"/>
+					<registro direccion="Salida_Seno" tipo="ENTERO_" indice="32" longitud="4" escritura="0"/>
+					<registro direccion="Entrada_Binaria" tipo="BIT_" indice="37" longitud="1" bit="1" escritura="0"/>
+					<registro direccion="Salida_Binaria" tipo="BIT_" indice="37" longitud="1" bit="1" escritura="0"/>
+					<registro direccion="Program:MainProgram.Pulso" tipo="BIT_" indice="37" longitud="1" bit="0" escritura="0"/>
+					<registro direccion="Program:MainProgram.Lacht_Binario" tipo="BIT_" indice="37" longitud="1" bit="2" escritura="0"/>
+					<registro direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" indice="22" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.TemporizadorON1.ACC" tipo="ENTERO_" indice="22" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.TemporizadorOFF1.PRE" tipo="ENTERO_" indice="32" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.TemporizadorOFF1.ACC" tipo="ENTERO_" indice="32" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.Disparo" tipo="BIT_" indice="37" longitud="1" bit="3" escritura="0"/>
+					<registro direccion="Program:MainProgram.Disparo2" tipo="BIT_" indice="37" longitud="1" bit="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.ContadorUP1.PRE" tipo="ENTERO_" indice="39" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.ContadorUP1.ACC" tipo="ENTERO_" indice="44" longitud="4" escritura="0"/>
+					<registro direccion="Program:MainProgram.ContadorDown1.PRE" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.ContadorDown1.ACC" tipo="ENTERO_" indice="44" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Real1" tipo="REAL_" indice="17" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Real2" tipo="REAL_" indice="27" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Entero1" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Entero2" tipo="ENTERO_" indice="44" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.enviar_mensaje" tipo="BIT_" indice="37" longitud="1" bit="5" escritura="1"/>
+					<registro direccion="Program:MainProgram.listo_conexion" tipo="BIT_" indice="37" longitud="1" bit="6" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Salida_Flotante" tipo="REAL_" indice="49" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entrada_Seno" tipo="ENTERO_" indice="22" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Salida_Seno" tipo="ENTERO_" indice="32" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Pulso" tipo="BIT_" indice="37" longitud="1" bit="2" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Lacht_Binario" tipo="BIT_" indice="37" longitud="1" bit="2" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorON1.PRE" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorON1.ACC" tipo="ENTERO_" indice="44" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorOFF1.PRE" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorOFF1.ACC" tipo="ENTERO_" indice="44" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Disparo" tipo="BIT_" indice="37" longitud="1" bit="3" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Disparo2" tipo="BIT_" indice="37" longitud="1" bit="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorUP1.PRE" tipo="ENTERO_" indice="22" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorUP1.ACC" tipo="ENTERO_" indice="32" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorDown1.PRE" tipo="ENTERO_" indice="22" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorDown1.ACC" tipo="ENTERO_" indice="32" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Real1" tipo="REAL_" indice="17" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Real2" tipo="REAL_" indice="27" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entero1" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entero2" tipo="ENTERO_" indice="44" longitud="4" escritura="1"/>
+					<registro direccion="ARREGLO_DINT" tipo="ENTERO_" indice="39" longitud="4" escritura="1"/>
+					<registro direccion="menos_uno" tipo="ENTERO_" indice="59" longitud="4" escritura="1"/>
+					<registro direccion="dentero" tipo="ENTERO_" indice="64" longitud="4" escritura="1"/>
+					<registro direccion="sentero" tipo="CARAC_" indice="69" longitud="1" escritura="1"/>
+					<registro direccion="intero" tipo="CORTO_" indice="71" longitud="2" escritura="1"/>
+					<registro direccion="rreal" tipo="REAL_" indice="74" longitud="4" escritura="1"/>
+					<registro direccion="menos_uno_sint" tipo="CARAC_" indice="79" longitud="1" escritura="1"/>
+					<registro direccion="ndentero" tipo="ENTERO_" indice="81" longitud="4" escritura="1"/>
+					<registro direccion="nsentero" tipo="CARAC_" indice="86" longitud="1" escritura="1"/>
+					<registro direccion="nintero" tipo="CORTO_" indice="88" longitud="2" escritura="1"/>
+					<registro direccion="nrreal" tipo="REAL_" indice="91" longitud="4" escritura="1"/>
+				</equipo>
+				<equipo nombre="dos" ip="192.168.0.3" puerto_escritura="17006">
+					<registro direccion="Entrada_Flotante" tipo="REAL_" indice="38" longitud="4" escritura="1"/>
+				</equipo>
+			</oyente>
+			<oyente id="2" puerto="9003" longitud="200">
+				<cantidad>0</cantidad>
+				<equipo nombre="uno" ip="192.168.0.4" puerto_escritura="17002">
+					<registro direccion="Entrada_Flotante" tipo="REAL_" indice="38" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Salida_Flotante" tipo="REAL_" indice="42" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Entrada_Seno" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Salida_Seno" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Entrada_Binaria" tipo="BIT_" indice="26" longitud="0" bit="1" escritura="1"/>
+					<registro direccion="Salida_Binaria" tipo="BIT_" indice="26" longitud="0" bit="1" escritura="1"/>
+					<registro direccion="Program:MainProgram.Pulso" tipo="BIT_" indice="26" longitud="0" bit="0" escritura="1"/>
+					<registro direccion="Program:MainProgram.Lacht_Binario" tipo="BIT_" indice="26" longitud="0" bit="2" escritura="1"/>
+					<registro direccion="Program:MainProgram.TemporizadorON1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.TemporizadorON1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.TemporizadorOFF1.PRE" tipo="ENTERO_" indice="30" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.TemporizadorOFF1.ACC" tipo="ENTERO_" indice="30" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Disparo" tipo="BIT_" indice="26" longitud="0" bit="3" escritura="1"/>
+					<registro direccion="Program:MainProgram.Disparo2" tipo="BIT_" indice="26" longitud="0" bit="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.ContadorUP1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.ContadorUP1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.ContadorDown1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.ContadorDown1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Real1" tipo="REAL_" indice="10" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Real2" tipo="REAL_" indice="18" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Entero1" tipo="ENTERO_" indice="22" longitud="4" escritura="1"/>
+					<registro direccion="Program:MainProgram.Entero2" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Salida_Flotante" tipo="REAL_" indice="42" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entrada_Seno" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Salida_Seno" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Pulso" tipo="BIT_" indice="26" longitud="0" bit="2" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Lacht_Binario" tipo="BIT_" indice="38" longitud="0" bit="2" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorON1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorON1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorOFF1.PRE" tipo="ENTERO_" indice="30" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.TemporizadorOFF1.ACC" tipo="ENTERO_" indice="30" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Disparo" tipo="BIT_" indice="26" longitud="0" bit="3" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Disparo2" tipo="BIT_" indice="26" longitud="0" bit="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorUP1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorUP1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorDown1.PRE" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.ContadorDown1.ACC" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Real1" tipo="REAL_" indice="10" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Real2" tipo="REAL_" indice="18" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entero1" tipo="ENTERO_" indice="14" longitud="4" escritura="1"/>
+					<registro direccion="Program:OtroPrograma.Entero2" tipo="ENTERO_" indice="22" longitud="4" escritura="1"/>
+					<registro direccion="ARREGLO_DINT" tipo="ENTERO_" indice="34" longitud="4" escritura="1"/>
+				</equipo>
+				<equipo nombre="dos" ip="192.168.0.3" puerto_escritura="17004">
+					<registro/>
+				</equipo>
+			</oyente>
+		</grupos>
+		<tiempo_muestreo/>
+		<lectura/>
+	</dispositivo>
+	<dispositivo id="3" modelo="SIM">
+		<nombre>sim_mbtcp</nombre>
+		<marca/>
+		<tipo/>
+		<habilitado>1</habilitado>
+		<comunicacion>
+			<tipo>MBTCP</tipo>
+			<direccion>127.0.0.1</direccion>
+			<puerto>1503</puerto>
+			<nodo>66</nodo>
+		</comunicacion>
+		<grupos/>
+		<tiempo_muestreo>300</tiempo_muestreo>
+		<lectura>
+			<registro direccion="000001" tipo="BIT_" cantidad="40" tmb="OCOILS_" escritura="1"/>
+			<registro direccion="100001" tipo="BIT_" cantidad="40" tmb="ICOILS_" escritura="0"/>
+			<registro direccion="300001" tipo="CORTO_" cantidad="40" tmb="IREG_" escritura="0"/>
+			<registro direccion="400001" tipo="CORTO_" cantidad="40" tmb="HREG_" escritura="1"/>
+		</lectura>
+	</dispositivo>
+</dispositivos_xml>

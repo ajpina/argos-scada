@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-clx_ethip en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-CLX_ETHIP'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-clx_ethip -d /home/ajpina/repositorio/trunk/argos-scada/config/dispositivos.xml'

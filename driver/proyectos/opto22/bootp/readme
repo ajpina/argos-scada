@@ -1,0 +1,44 @@
+                                    Enet Bootp Application
+
+                                        January 11, 2000
+
+                                           DISCLAIMER
+
+This source code is supplied as shareware, use at your own risk without any gaurantees or support.
+
+
+Building the Application
+
+The application is a single source module named "enetbootp.c." There is a batch file named bat
+that needs to be changed to executable and running it will build an application called enetbootp.
+
+Configuring the Application
+
+A file named enetbootp.cfg must reside in the location the enetbootp application is started. The
+configuration file contains information for identifying incoming Opto 22 Ethernet bootp packets and
+the proper information to send to the devices. Each entry MUST contain the MAC (as 6 dash digits),
+the IP address in "dot" format, and the netmask (also in dot format). The gateway may be supplied.
+A DNS field is supplied but is not used in current versions of the Ethernet devices. Any right
+sided field missing will be interpreted as a 0.0.0.0 address.
+
+The MAC address is shown in the table as the 6 "dash" format, however, the application assumes
+internally that the three most significant bytes are 00-a0-3d as all Opto 22 devices start with this
+header.
+
+Running the Application
+
+In the folder that has the configuration file, invoke the enetbootp executable. As the server listens
+on port 67, this is considered a system port and you MUST be root to do this. We're looking into making
+a psuedo port above the system level so you won't have to do this but, don't expect it too soon.
+
+Customizing the Application
+
+If you prefer to imbed this app's features, comment the main function and make a small header that protos
+the configuration and listen functions. Use the main as a prototype for the function call order. You
+may also want to lower the number of static structures maintained in the enetlist. This is deliberately
+set high and it's probably higher than it really needs to be...
+
+OS History
+
+Created and ran on a Pentium 133 platform, Redhat 6.1, with two Intel EEPro adapters.
+

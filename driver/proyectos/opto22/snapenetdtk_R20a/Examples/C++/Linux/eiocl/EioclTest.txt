@@ -1,0 +1,105 @@
+
+// Opto 22 SNAP Ethernet I/O Command Line Tool R2.0a
+// 
+// This file shows how to make a file of commands for the
+// eiocl.exe tool. The command format is described and then
+// an example of each type of command and data type is given.
+//
+// The command format is:
+// mem-addr/pt r/w type [length] [data]
+//
+//   mem-addr: a hexadecimal memory map address
+//   pt:       a point number (0-63)
+//   r/w:      read or write 
+//   type:     see the table bellow for the list of types
+//   length:   see the table bellow for when a length is required
+//   data:     see the table bellow for when data is required
+//
+// Required Read/Write parameters for the data types:
+//
+//    Type  Description      Read Mode    Write Mode
+//    ==================================================
+//      d   Decimal                       value
+//      x   Hexadecimal                   value
+//      f   Float                         value
+//      b   Binary           length       length  data
+//      s   String           length       "string"
+//      ip  IP Address                    IP-Address
+//      dp  Digital Point                 state
+//      ap  Analog  Point                 value
+
+
+// A line starting with "//" is a comment
+
+
+// Examples of each data type follow.
+
+
+// Write a decimal value to memory
+F0500004 w d 123
+
+// Read memory as a decimal values
+F0400000 r d
+
+
+
+// Write a hexadecimal value to memory
+F0500004 w d 0x1234ABCD
+
+// Read memory as a hexadecimal value
+F0400000 r x
+
+
+
+// Write a float value to memory
+F0B00300 w f 12.34
+
+// Read memory as a float value
+F0A00300 r f
+
+
+
+// Write 8 bytes of binary date to memory
+F0C00030 w b 8 01 23 45 67 89 AB CD EF
+
+// Read 8 bytes of memory as binary data
+F0C00030 r b 8
+
+
+
+// Write a string to memory
+F0C00030 w s "point 0 name"  
+F0C00070 w s "point \"1\" name"  
+
+// Read 15 bytes of memory as a string
+F0C00030 r s 15
+F0C00070 r s 15
+
+
+
+// Write an IP address to memory
+F03FFFE0 w ip 10.20.30.40
+
+// Read memory as an IP address
+F0300034 r ip
+
+
+
+// Turn digital point 8 on
+8 w dp 1
+
+// Turn digital point 8 off
+8 w dp 0
+
+// Read digital point 8
+8 r dp
+
+
+
+// Set analog point 12 to 3.14
+12 w ap 3.14
+
+// Read analog point 12
+12 r ap
+
+

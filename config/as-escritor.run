@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-escritor en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-ESCRITOR'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-escritor -d /home/ajpina/repositorio/trunk/argos-scada/config/dispositivos.xml -t /home/ajpina/repositorio/trunk/argos-scada/config/tags.xml -a /home/ajpina/repositorio/trunk/argos-scada/config/alarmas.xml -s /home/ajpina/repositorio/trunk/argos-scada/config/servidor_datos.xml'

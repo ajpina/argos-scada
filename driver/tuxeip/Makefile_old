@@ -1,0 +1,66 @@
+VARS = -D_DEBUG_
+CC = gcc
+CXX = g++
+CFLAGS = -O0 -g3 -Wall -fmessage-length=0 $(VARS)
+CXXFLAGS = $(CFLAGS)
+TARGET = ssclx_ethip
+
+#PATH = driver/tuexeip
+OBJ_DIR = src
+SRC_DIR = $(OBJ_DIR)
+OBJS = $(OBJ_DIR)/AB.o \
+			$(OBJ_DIR)/CIP_IOI.o \
+			$(OBJ_DIR)/CM.o \
+			$(OBJ_DIR)/ErrCodes.o \
+			$(OBJ_DIR)/Ethernet_IP.o \
+			$(OBJ_DIR)/LGX.o \
+			$(OBJ_DIR)/MR.o \
+			$(OBJ_DIR)/PLC.o \
+			$(OBJ_DIR)/SendData.o \
+			$(OBJ_DIR)/ssclx_ethip.o
+
+INC_XML = ../../tinyxml
+INC_TUXEIP = include
+INC_ARGOS = ../../include
+INC_DIR = -I$(INC_TUXEIP) -I$(INC_XML) -I$(INC_ARGOS)
+
+LIB_ARGOS_DIR = ../../lib
+#LIB_TUXEIP = ../../lib/libtuxeip.a
+LIB_DIR = -L$(LIB_ARGOS_DIR)
+LIBS = -ltinyxml -lrt
+
+BIN_DIR = ../../bin
+BINS = ssclx_ethip
+
+
+
+all: ssclx_ethip
+
+ssclx_ethip: $(OBJS)
+	$(CXX) $(LIB_DIR) $(LIBS) $^ $(LIB_ARGOS_DIR)/libssutil.a $(LIB_ARGOS_DIR)/libssregistro.a -o $(BIN_DIR)/$@
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+
+$(OBJ_DIR)/%.o: $(OBJ_DIR)/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	$(CXX) $(INC_DIR) $(CXXFLAGS) -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+$(OBJ_DIR)/%.o: $(OBJ_DIR)/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	$(CC) $(INC_DIR) $(CFLAGS) -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(OBJS) $(TARGET) ssclx_ethip $(SRC_DIR)/{*.save,*.d,*~} $(INC_TUXEIP)/{*.save,*~} ./{*.save,*~}
+	-@echo 'Fin de Limpieza'
+
+.PHONY: all clean
+.SECONDARY:
+

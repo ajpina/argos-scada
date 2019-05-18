@@ -1,0 +1,6 @@
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-datos en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-DATOS'
+exec envdir /home/ajpina/repositorio/trunk/argos-scada/config/env /bin/sh -c 'exec as-datos -c /home/ajpina/repositorio/trunk/argos-scada/config/servidor_datos.xml'

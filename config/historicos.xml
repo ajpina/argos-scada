@@ -1,0 +1,21 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<historicos_xml>
+	<cola>/procesar_historicos</cola>
+	<tags>tendencias</tags>
+	<alarmas>alarmeros</alarmas>
+	<bd>
+		<nombre>complejo1</nombre>
+		<esquema>argos</esquema>
+		<usuario>argos</usuario>
+		<pwd>argos</pwd>
+	</bd>
+	<mensaje>
+		<longitud>128</longitud>
+		<cantidad>4096</cantidad>
+		<alarmas_x_mensaje>50</alarmas_x_mensaje>
+	</mensaje>
+	<tiempo_escaner>10000</tiempo_escaner>
+	<tiempo_entre_consultas>100000</tiempo_entre_consultas>
+	<tiempo_descarga_lote>1</tiempo_descarga_lote>
+	<buffer_alarmas>1000</buffer_alarmas>
+</historicos_xml>
