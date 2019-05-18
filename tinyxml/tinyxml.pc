@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: TinyXML 
+Description: Libreria Manejo Archivos XML.
+Version: 0.5.3
+Libs: -L${libdir} -l@GENERIC_LIBRARY_NAME@
+Cflags: -I${includedir}/@GENERIC_LIBRARY_NAME@ -I${libdir}/@GENERIC_LIBRARY_NAME@/include
+

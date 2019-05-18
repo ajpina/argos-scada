@@ -1,0 +1,31 @@
+prefix		= /usr/local
+exec_prefix	= ${prefix}
+bindir		= ${exec_prefix}/bin
+datadir		= ${datarootdir}
+datarootdir	= ${prefix}/share
+includedir	= ${prefix}/include
+libdir		= ${exec_prefix}/lib
+mandir		= ${datarootdir}/man
+srcdir		= .
+docdir		= $(datadir)/doc
+
+
+HTMLDOC		= @HTMLDOC@
+INSTALL		= /usr/bin/install -c
+LN		= ln -s
+NROFF		= @NROFF@
+RM		= rm -f
+RMDIR		= rm -rf
+SHELL		= /bin/sh
+STRIP		= strip
+AM_STRIP_DIR	= `echo $$p | sed -e 's|^.*/||'`;
+
+LIBCOMMAND	= /usr/bin/ar cr
+RANLIB		= ranlib
+
+CFLAGS		=   -fPIC
+CXXFLAGS	=   -fPIC
+
+
+#Compilacion Silenciosa
+#.SILENT:

@@ -1,0 +1,665 @@
+#!/bin/bash
+#
+# Este script es parte de Argos, se encarga de las tareas administrativas
+# de matar, detener y crear todos los servicios que dispone Argos
+#
+# Copyright (C) 2006 Alejandro Pina <ajpina@gmail.com>
+#
+# Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo
+# los terminos de la Licencia Publica General de GNU segun es publicada por
+# la Free Software Foundation, bien de la version 3 de dicha Licencia o bien
+# (segun su eleccion) de cualquier version posterior.
+#
+# Este programa se distribuye con la esperanza de que sea util, pero
+# SIN NINGUNA GARANTIA, incluso sin la garantia MERCANTIL implicita o sin
+# garantizar la CONVENIENCIA PARA UN PROPOSITO PARTICULAR. Vease la Licencia
+# Publica General de GNU para mas detalles.
+#
+# Deberia haber recibido una copia de la Licencia Publica General junto con
+# este programa. Si no ha sido asi, escriba a la Free Software Foundation, Inc.,
+# en 675 Mass Ave, Cambridge, MA 02139, EEUU.
+#
+# Alejandro Pina mediante este documento renuncia a cualquier interes de derechos de
+# copyright con respecto al programa 'argos'.
+#
+# 01 de Julio de 2009
+#
+# Por favor reporte cualquier fallo a la siguiente direccion:
+#
+#	http://www.cintal.com.ve/tecnologia/argos
+#
+
+INICIAR=0
+PAUSAR=0
+MATAR=0
+REINICIAR=0
+CONFIG_DIR="~/argos-scada/config"
+ALARMAS_XML="alarmas.xml"
+TAGS_XML="tags.xml"
+DISPOSITIVOS_XML="dispositivos.xml"
+HISTORICOS_XML="historicos.xml"
+SERVIDOR_XML="servidor_datos.xml"
+CLIENTE_XML="cliente_datos.xml"
+OYENTE=1
+
+
+usage() {
+	echo "Usage: as-admin [opciones] argumentos"
+	echo
+	echo "Administra los servicios de Argos"
+	echo
+	echo "  as-admin -i <servicios>  - inicia la ejecucion de los <servicios>"
+	echo "  as-admin -s <servicios>  - suspende la ejecucion de los <servicios>"
+	echo "  as-admin -m <servicios>  - mata la ejecucion de los <servicios>"
+	echo "  as-admin -r <servicios>  - reinicia la ejecucion de los <servicios>"
+	echo "  as-admin -z <dir>        - directorio con los archivos de configuracion"
+	echo "  as-admin -a <archivo>    - archivos de configuracion de alarmas"
+	echo "  as-admin -t <archivo>    - archivos de configuracion de tags"
+	echo "  as-admin -d <archivo>    - archivos de configuracion de dispositivos"
+	echo "  as-admin -h <archivo>    - archivos de configuracion de historicos"
+	echo "  as-admin -p <archivo>    - archivos de configuracion de productores"
+	echo "  as-admin -c <archivo>    - archivos de configuracion de consumidores"
+	echo "  as-admin -o <num>        - oyente solo para as-clx_ethip_ps"
+	echo
+}
+
+do_asbd(){
+	echo "[as-BD]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-bd ]; then
+			svc -dx /etc/service/as-bd
+			rm -rf /etc/service/as-bd
+		fi
+		RUN=$CONFIG_DIR/as-bd.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-bd en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-BD'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-bd -h $CONFIG_DIR/$HISTORICOS_XML -t $CONFIG_DIR/$TAGS_XML -a $CONFIG_DIR/$ALARMAS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-bd
+		cd /etc/service/as-bd
+		ln -s $RUN run
+		#svc -u /etc/service/as-bd
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-bd ]; then
+			svc -dx /etc/service/as-bd
+			rm -rf /etc/service/as-bd
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-bd ]; then
+			svc -p /etc/service/as-bd
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-bd ]; then
+			svc -c /etc/service/as-bd
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_ascliente(){
+	echo "[as-CLIENTE]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-cliente ]; then
+			svc -dx /etc/service/as-cliente
+			rm -rf /etc/service/as-cliente
+		fi
+		RUN=$CONFIG_DIR/as-cliente.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-cliente en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-CLIENTE'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-cliente -c $CONFIG_DIR/$CLIENTE_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-cliente
+		cd /etc/service/as-cliente
+		ln -s $RUN run
+		#svc -u /etc/service/as-cliente
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-cliente ]; then
+			svc -dx /etc/service/as-cliente
+			rm -rf /etc/service/as-cliente
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-cliente ]; then
+			svc -p /etc/service/as-cliente
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-cliente ]; then
+			svc -c /etc/service/as-cliente
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asdatos(){
+	echo "[as-DATOS]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-datos ]; then
+			svc -dx /etc/service/as-datos
+			rm -rf /etc/service/as-datos
+		fi
+		RUN=$CONFIG_DIR/as-datos.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-datos en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-DATOS'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-datos -c $CONFIG_DIR/$SERVIDOR_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-datos
+		cd /etc/service/as-datos
+		ln -s $RUN run
+		#svc -u /etc/service/as-datos
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-datos ]; then
+			svc -dx /etc/service/as-datos
+			rm -rf /etc/service/as-datos
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-datos ]; then
+			svc -p /etc/service/as-datos
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-datos ]; then
+			svc -c /etc/service/as-datos
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asescaner(){
+	echo "[as-ESCANER]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-escaner ]; then
+			svc -dx /etc/service/as-escaner
+			rm -rf /etc/service/as-escaner
+		fi
+		RUN=$CONFIG_DIR/as-escaner.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-escaner en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-ESCANER'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-escaner -d $CONFIG_DIR/$DISPOSITIVOS_XML -t $CONFIG_DIR/$TAGS_XML -a $CONFIG_DIR/$ALARMAS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-escaner
+		cd /etc/service/as-escaner
+		ln -s $RUN run
+		#svc -u /etc/service/as-escaner
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-escaner ]; then
+			svc -dx /etc/service/as-escaner
+			rm -rf /etc/service/as-escaner
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-escaner ]; then
+			svc -p /etc/service/as-escaner
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-escaner ]; then
+			svc -c /etc/service/as-escaner
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asescritor(){
+	echo "[as-ESCRITOR]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-escritor ]; then
+			svc -dx /etc/service/as-escritor
+			rm -rf /etc/service/as-escritor
+		fi
+		RUN=$CONFIG_DIR/as-escritor.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-escritor en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-ESCRITOR'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-escritor -d $CONFIG_DIR/$DISPOSITIVOS_XML -t $CONFIG_DIR/$TAGS_XML -a $CONFIG_DIR/$ALARMAS_XML -s $CONFIG_DIR/$SERVIDOR_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-escritor
+		cd /etc/service/as-escritor
+		ln -s $RUN run
+		#svc -u /etc/service/as-escritor
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-escritor ]; then
+			svc -dx /etc/service/as-escritor
+			rm -rf /etc/service/as-escritor
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-escritor ]; then
+			svc -p /etc/service/as-escritor
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-escritor ]; then
+			svc -c /etc/service/as-escritor
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asregistrador(){
+	echo "[as-REGISTRADOR]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-registrador ]; then
+			svc -dx /etc/service/as-registrador
+			rm -rf /etc/service/as-registrador
+		fi
+		RUN=$CONFIG_DIR/as-registrador.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-registrador en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-REGISTRADOR'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-registrador -h $CONFIG_DIR/$HISTORICOS_XML -t $CONFIG_DIR/$TAGS_XML -a $CONFIG_DIR/$ALARMAS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-registrador
+		cd /etc/service/as-registrador
+		ln -s $RUN run
+		#svc -u /etc/service/as-registrador
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-bd ]; then
+			svc -dx /etc/service/as-registrador
+			rm -rf /etc/service/as-registrador
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-registrador ]; then
+			svc -p /etc/service/as-registrador
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-registrador ]; then
+			svc -c /etc/service/as-registrador
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_astrazador(){
+	echo "[as-TRAZADOR]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-trazador ]; then
+			svc -dx /etc/service/as-trazador
+			rm -rf /etc/service/as-trazador
+		fi
+		RUN=$CONFIG_DIR/as-trazador.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-trazador en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-TRAZADOR'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-trazador -h $CONFIG_DIR/$HISTORICOS_XML -t $CONFIG_DIR/$TAGS_XML -a $CONFIG_DIR/$ALARMAS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-trazador
+		cd /etc/service/as-trazador
+		ln -s $RUN run
+		#svc -u /etc/service/as-trazador
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-trazador ]; then
+			svc -dx /etc/service/as-trazador
+			rm -rf /etc/service/as-trazador
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-trazador ]; then
+			svc -p /etc/service/as-trazador
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-trazador ]; then
+			svc -c /etc/service/as-trazador
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asclx_ethip(){
+	echo "[as-CLX_ETHIP]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-clx_ethip ]; then
+			svc -dx /etc/service/as-clx_ethip
+			rm -rf /etc/service/as-clx_ethip
+		fi
+		RUN=$CONFIG_DIR/as-clx_ethip.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-clx_ethip en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-CLX_ETHIP'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-clx_ethip -d $CONFIG_DIR/$DISPOSITIVOS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-clx_ethip
+		cd /etc/service/as-clx_ethip
+		ln -s $RUN run
+		#svc -u /etc/service/as-clx_ethip
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-clx_ethip ]; then
+			svc -dx /etc/service/as-clx_ethip
+			rm -rf /etc/service/as-clx_ethip
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-clx_ethip ]; then
+			svc -p /etc/service/as-clx_ethip
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-clx_ethip ]; then
+			svc -c /etc/service/as-clx_ethip
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asclx_ethip_ps(){
+	echo "[as-CLX_ETHIP_PS]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-clx_ethip_ps ]; then
+			svc -dx /etc/service/as-clx_ethip_ps
+			rm -rf /etc/service/as-clx_ethip_ps
+		fi
+		RUN=$CONFIG_DIR/as-clx_ethip_ps.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-clx_ethip_ps en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-CLX_ETHIP_PS'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-clx_ethip_ps -d $CONFIG_DIR/$DISPOSITIVOS_XML -o $OYENTE'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-clx_ethip_ps
+		cd /etc/service/as-clx_ethip_ps
+		ln -s $RUN run
+		#svc -u /etc/service/as-clx_ethip_ps
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-clx_ethip_ps ]; then
+			svc -dx /etc/service/as-clx_ethip_ps
+			rm -rf /etc/service/as-clx_ethip_ps
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-clx_ethip_ps ]; then
+			svc -p /etc/service/as-clx_ethip_ps
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-clx_ethip_ps ]; then
+			svc -c /etc/service/as-clx_ethip_ps
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+do_asmbtcp(){
+	echo "[as-MBTCP]"
+	if [ $INICIAR = 1 ]; then
+		echo "Iniciando..."
+		if [ -d /etc/service/as-mbtcp ]; then
+			svc -dx /etc/service/as-mbtcp
+			rm -rf /etc/service/as-mbtcp
+		fi
+		RUN=$CONFIG_DIR/as-mbtcp.run
+		if [ -f $RUN ]; then
+			rm -f $RUN
+		fi
+		if touch $RUN ; then
+			cat > $RUN <<-EOF
+#!/bin/sh
+# Script de Configuracion para Convertir
+# el proceso as-mbtcp en demonio, generado automaticamente
+
+echo 'Arrancado Proceso as-MBTCP'
+exec envdir $CONFIG_DIR/env /bin/sh -c 'exec as-mbtcp -d $CONFIG_DIR/$DISPOSITIVOS_XML'
+			EOF
+    		fi
+		chmod 755 $RUN 2> /dev/null || true
+		mkdir -p /etc/service/as-mbtcp
+		cd /etc/service/as-mbtcp
+		ln -s $RUN run
+		#svc -u /etc/service/as-mbtcp
+	elif [ $MATAR = 1 ]; then
+		echo "Matando..."
+		if [ -d /etc/service/as-mbtcp ]; then
+			svc -dx /etc/service/as-mbtcp
+			rm -rf /etc/service/as-mbtcp
+		fi
+	elif [ $PAUSAR = 1 ]; then
+		echo "Suspendiendo..."
+		if [ -d /etc/service/as-mbtcp ]; then
+			svc -p /etc/service/as-mbtcp
+		fi
+	elif [ $REINICIAR = 1 ]; then
+		echo "Reiniciando..."
+		if [ -d /etc/service/as-mbtcp ]; then
+			svc -c /etc/service/as-mbtcp
+		fi
+	else
+		echo "Accion desconocida"
+	fi
+}
+
+# Lee las opciones
+while getopts ":ismrz:a:t:d:h:p:c:o:" opt
+do
+        case $opt in
+		i) INICIAR=1 ;;
+		s) PAUSAR=1 ;;
+		m) MATAR=1 ;;
+		r) REINICIAR=1 ;;
+		z) CONFIG_DIR=$OPTARG ;;
+		a) ALARMAS_XML=$OPTARG ;;
+		t) TAGS_XML=$OPTARG ;;
+		d) DISPOSITIVOS_XML=$OPTARG ;;
+		h) HISTORICOS_XML=$OPTARG ;;
+		p) SERVIDOR_XML=$OPTARG ;;
+		c) CLIENTE_XML=$OPTARG ;;
+		o) OYENTE=$OPTARG ;;
+		?) usage
+		exit 2 ;;
+        esac
+done
+shift $(($OPTIND - 1))
+
+if [ $INICIAR = 1 ]; then
+	if [ $PAUSAR = 1 ] || [ $MATAR = 1 ] || [ $REINICIAR = 1 ]; then
+		echo
+		echo "Solo una accion puede ser ejecutada: iniciar, detener, reiniciar o matar"
+		echo
+		usage
+		exit 2
+	fi
+elif [ $PAUSAR = 1 ]; then
+	if [ $INICIAR = 1 ] || [ $MATAR = 1 ] || [ $REINICIAR = 1 ]; then
+		echo
+		echo "Solo una accion puede ser ejecutada: iniciar, detener, reiniciar o matar"
+		echo
+		usage
+		exit 2
+	fi
+elif [ $MATAR = 1 ]; then
+	if [ $INICIAR = 1 ] || [ $PAUSAR = 1 ] || [ $REINICIAR = 1 ]; then
+		echo
+		echo "Solo una accion puede ser ejecutada: iniciar, detener, reiniciar o matar"
+		echo
+		usage
+		exit 2
+	fi
+elif [ $REINICIAR = 1 ]; then
+	if [ $INICIAR = 1 ] || [ $PAUSAR = 1 ] || [ $MATAR = 1 ]; then
+		echo
+		echo "Solo una accion puede ser ejecutada: iniciar, detener, reiniciar o matar"
+		echo
+		usage
+		exit 2
+	fi
+else
+	echo
+	echo "Debe seleccionar una accion para ser ejecutada: iniciar, detener, reiniciar o matar"
+	echo
+	usage
+	exit 2
+fi
+
+for SERVICIO in "$@"; do
+	#listado de servicios
+	case $SERVICIO in
+		as-bd)
+			do_asbd
+		;;
+		as-cliente)
+			do_ascliente
+		;;
+		as-datos)
+			do_asdatos
+		;;
+		as-escaner)
+			do_asescaner
+		;;
+		as-escritor)
+			do_asescritor
+		;;
+		as-registrador)
+			do_asregistrador
+		;;
+		as-trazador)
+			do_astrazador
+		;;
+		as-clx_ethip)
+			do_asclx_ethip
+		;;
+		as-clx_ethip_ps)
+			do_asclx_ethip_ps
+		;;
+		as-mbtcp)
+			do_asmbtcp
+		;;
+		todo)
+			do_asclx_ethip
+			do_asclx_ethip_ps
+			do_asmbtcp
+			sleep 2
+			do_asescaner
+			sleep 2
+			do_asregistrador
+			sleep 2
+			do_asescritor
+			do_asbd
+			do_asdatos
+			sleep 1
+			do_ascliente
+		;;
+		*)
+		        echo "Servicio: [ $SERVICIO ] Desconocido"
+	        ;;
+	esac
+done
+
+
+
+
+exit 0

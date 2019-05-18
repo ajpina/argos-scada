@@ -1,0 +1,8 @@
+#!/bin/sh
+rm -f config.cache
+libtoolize --force
+aclocal
+autoconf
+autoheader
+automake -ac
+exit
