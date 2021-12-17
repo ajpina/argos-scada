@@ -1,0 +1,94 @@
+INST_DIR    = $(shell dirname $(realpath ../../../))
+MST_DIR     = $(abspath $(dir $(INST_DIR)))
+PRJ_NAME    = argos-scada
+PRJ_DIR     = $(MST_DIR)/$(PRJ_NAME)
+BIN_DIR     = $(PRJ_DIR)/BIN
+DAT_DIR     = $(PRJ_DIR)/DAT
+REF_DIR     = $(PRJ_DIR)/REFERENCES
+SCR_DIR     = $(PRJ_DIR)/SCRIPTS
+SRC_DIR     = $(PRJ_DIR)/SOURCE
+INC_DIR     = $(PRJ_DIR)/INCLUDE
+OBJ_DIR     = $(PRJ_DIR)/OBJECT
+LIB_DIR     = $(PRJ_DIR)/LIB
+DEP_DIR    := .deps
+
+GCC         = gcc
+GPP         = g++
+
+OPTIMIZE    = -O0
+DEBUG       = -g
+WARNINGS    = -Wall
+CFLAGS      = $(WARNINGS) $(DEBUG) $(OPTIMIZE) -I $(INC_DIR)
+DEPFLAGS    = -MT $@ -MMD -MP -MF $(DEP_DIR)/$*.Td
+LIBS        = -L $(LIB_DIR) -l modbus -l m -l json
+
+AR          = ar
+ARFLAGS     = -crs
+
+COMPILER    = $(GCC)
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Find all the C language source files in this directory
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SRCS := $(wildcard *.c)
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Make up the list of resultant object files & dependencies
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+OBJS := $(SRCS:%.c=$(OBJ_DIR)/%.o)
+DEPS := $(SRCS:%.c=$(DEP_DIR)/%.d)
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Define what we want to build and how to build it ...
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+TARGET := $(BIN_DIR)/mbEmulatorTest
+
+$(TARGET) :  $(OBJS)
+	$(COMPILER) $(CFLAGS) -I $(INC_DIR) -o $(TARGET) $(OBJS) $(LIBS)
+
+run  :
+	$(BIN_DIR)/as-mbEmulatorTcp  -j $(DAT_DIR)/mbEmulatorTcp.json &
+	$(TARGET) -j $(DAT_DIR)/mbEmulatorTcp.json
+	kill -USR1 `pidof as-mbEmulatorTcp`
+
+stress :
+	tclsh emulatorStressTest.tcl
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Over-ride some of make's internal implicit rules so that dependencies
+# will be automatically and correctly re-made as required ...
+#
+# A lot of research and trial and error went into this so be VERY careful
+# when modifying it. You have been warned!
+#
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+POSTCOMPILE = mv -f $(DEP_DIR)/$*.Td $(DEP_DIR)/$*.d && touch $@
+
+$(OBJ_DIR)/%.o : %.c
+
+$(OBJ_DIR)/%.o : %.c $(DEP_DIR)/%.d | $(DEP_DIR)
+	$(COMPILER) $(DEPFLAGS) $(CFLAGS) -I $(INC_DIR) -c -o $@ $<
+	$(POSTCOMPILE)
+
+$(DEP_DIR):
+	@mkdir -p $@
+
+$(DEPS):
+include $(wildcard $(DEPS))
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Finally the project actions which are not based on actual files ...
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.PHONY :  clean
+
+clean :
+	-rm -f $(OBJS)
+	-rm -f $(DEPS)
+	-rm -f $(TARGET)
+	-rm -f tags
+
+
+
