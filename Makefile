@@ -1,4 +1,4 @@
-INST_DIR	= $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+INST_DIR    = $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 MST_DIR     = $(abspath $(dir $(INST_DIR)))
 PRJ_NAME    = argos-scada
 PRJ_DIR     = $(MST_DIR)/$(PRJ_NAME)
