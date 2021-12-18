@@ -1,14 +1,14 @@
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 # Change to projects bin directory
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
-cd "/media/ext/argos/misc/2Alejandro_2/BIN"
+cd "/media/ext/argos/argos-scada/BIN"
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 # Start the emulator server ...
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 set serverPid [ exec "xterm" "-hold" "-e"  "./as-mbEmulator" "-j" "../DAT/mbEmulator.json" & ]
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 # Start up 50 copies of the MODBUS test program
-# The emulator should handle all of them but the 
+# The emulator should handle all of them but the
 # backlog is only 10 so you never know ...
 # +++++++++++++++++++++++++++++++++++++++++++++++++++
 for { set k  0 } { $k < 50 } { incr k } {

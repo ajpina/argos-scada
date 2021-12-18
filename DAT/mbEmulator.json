@@ -1,0 +1,6 @@
+{
+    "ip"                 :  "127.0.0.1",
+    "port"               :  "1503",
+    "backlog"            :  "10",
+    "tickFrequency"      :  "3"
+}
